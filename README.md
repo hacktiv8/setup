@@ -9,10 +9,7 @@ To get more [Homebrew Cask](https://caskroom.github.io/) packages [search here](
 Open up Terminal.app and run the following commands:
 
 ```sh
-mkdir -p ~/github
-cd ~/github
-git clone https://github.com/hacktiv8/setup.git
-cd setup
+curl -O https://raw.githubusercontent.com/hacktiv8/setup/master/start.sh
 chmod +x start.sh
 ./start.sh
 ```
