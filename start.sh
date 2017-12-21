@@ -41,14 +41,10 @@ brew cask install firefox
 brew install git
 brew cask install sublime-text
 brew cask install atom
-brew cask install vscode
-brew cask install virtualbox
-brew cask install dash
-brew cask install postman
+brew cask install insomnia
 brew cask install macdown
-brew cask install vagrant
-brew cask install transmit
 brew install heroku-toolbelt
+brew cask install expo-xde
 heroku update
 
 brew install docker
@@ -61,8 +57,14 @@ brew cask install sketch
 brew install node
 brew install postgres
 brew install watchman
-brew install android-sdk
 brew install redis
+brew cask install mongodb
+brew install yarn
+
+# Android
+brew install android-sdk
+brew cask install genymotion
+brew cask install vysor
 
 # NPM Packages
 npm install -g sequelize-cli
@@ -74,7 +76,28 @@ npm install -g react-native-cli
 npm install -g mocha
 npm install -g jest
 npm install -g firebase-tools
+npm install -g aws-sdk
 npm install -g vue-cli
+npm install -g express-generator
+npm install -g exp
+
+# Dock Cleanup
+defaults delete com.apple.dock persistent-apps
+defaults delete com.apple.dock persistent-others
+
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/iTerm.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Sublime Text.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Atom.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Insomnia.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Slack.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Expo XDE.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+
+killall Dock
+
+# Disable Wifi and Hide the Icon
+
+# Reverse Mouse Scroll Direction
 
 # Git Alias
 echo
