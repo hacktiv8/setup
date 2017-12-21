@@ -60,8 +60,21 @@ brew cask install sketch
 # Node
 brew install node
 brew install postgres
+brew install watchman
+brew install android-sdk
+brew install redis
 
-# TODO: NPM Packages
+# NPM Packages
+npm install -g sequelize-cli
+npm install -g nodemon
+npm install -g pm2
+npm install -g create-react-app
+npm install -g create-react-native-app
+npm install -g react-native-cli
+npm install -g mocha
+npm install -g jest
+npm install -g firebase-tools
+npm install -g vue-cli
 
 # Git Alias
 echo
