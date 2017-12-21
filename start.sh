@@ -64,6 +64,9 @@ brew cask install java
 brew cask install google-chrome
 brew cask install firefox
 
+# Communication
+brew cask install slack
+
 # Dev Tools
 brew install git
 brew cask install sublime-text
