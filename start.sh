@@ -53,21 +53,26 @@ echo
 echo "Adding Homebrew's sbin to your PATH..."
 echo 'export PATH="/usr/local/sbin:$PATH"' >> ~/.bash_profile
 
+echo "Installing cask & wget"
 brew tap caskroom/cask
 brew install wget
 
 # Core Apps
+echo "Installing core apps"
 brew cask install iterm2
 brew cask install java
 
 # Browsers
+echo "Installing browsers"
 brew cask install google-chrome
 brew cask install firefox
 
 # Communication
+echo "Installing slack"
 brew cask install slack
 
 # Dev Tools
+echo "Installing Dev Tools"
 brew install git
 brew cask install sublime-text
 brew cask install atom
@@ -76,27 +81,38 @@ brew cask install macdown
 brew install heroku-toolbelt
 brew cask install expo-xde
 heroku update
-
 brew install docker
 brew cask install postgres
 
 # Graphic Apps
+echo "Installing Graphic Apps"
 brew cask install sketch
 
 # Node
+echo "==> preparing node etc for immersive"
+echo "Installing NodeJS"
 brew install node
+echo "Installing PostgreSQL"
 brew install postgres
-brew install watchman
+#brew install watchman
+echo "Installing Redis"
 brew install redis
+echo "Installing MongoDB"
 brew cask install mongodb
+echo "Installing Yarn"
 brew install yarn
 
 # Android
+echo "==> preparing for android dev"
+echo "Installing android-sdk"
 brew install android-sdk
+echo "Installing genymotion"
 brew cask install genymotion
+echo "Installing vysor"
 brew cask install vysor
 
 # NPM Packages
+echo "==> preparing and installing npm packages"
 npm install -g sequelize-cli
 npm install -g nodemon
 npm install -g pm2
@@ -112,6 +128,8 @@ npm install -g express-generator
 npm install -g exp
 
 # Dock Cleanup
+echo "A cool Dock is in the making..."
+
 defaults delete com.apple.dock persistent-apps
 defaults delete com.apple.dock persistent-others
 
