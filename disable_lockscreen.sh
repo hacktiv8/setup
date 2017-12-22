@@ -1,9 +1,11 @@
-user=$(ls -l /dev/console | awk {' print $3' })
+echo "preventing lockscreen"
 
-path = "/Users/$user/Library/Preferences/com.apple.screensaver"
+user_dis=$(ls -l /dev/console | awk {' print $3' })
 
-defaults write "$path" askForPassword -int 0
-defaults write "$path" idleTime -int 7200
-defaults write "$path" askForPassword -bool false
+path_dis = "/Users/$user_dis/Library/Preferences/com.apple.screensaver"
 
-chown $user:staff $path.plist
+defaults write "$path_dis" askForPassword -int 0
+defaults write "$path_dis" idleTime -int 7200
+defaults write "$path_dis" askForPassword -bool false
+
+chown $user_dis:staff $path_dis.plist
