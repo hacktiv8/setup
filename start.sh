@@ -106,8 +106,10 @@ brew install yarn
 echo "==> preparing for android dev"
 echo "Installing android-sdk"
 brew cask install android-sdk
-echo "Installing genymotion"
-brew cask install genymotion
+echo "Installing android-studio"
+brew cask install android-studio
+#echo "Installing genymotion"
+#brew cask install genymotion
 echo "Installing vysor"
 brew cask install vysor
 
@@ -142,6 +144,32 @@ defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Expo XDE.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 
 killall Dock
+
+# Preventing lockscreen
+echo "preventing lockscreen"
+
+user_dis=$(ls -l /dev/console | awk {' print $3' })
+
+path_dis = "/Users/$user_dis/Library/Preferences/com.apple.screensaver"
+
+defaults write "$path_dis" askForPassword -int 0
+defaults write "$path_dis" idleTime -int 7200
+defaults write "$path_dis" askForPassword -bool false
+
+chown $user_dis:staff $path_dis.plist
+
+# Deep Freeze
+echo "deepfreezing this mac..."
+echo "downloading cloudagent"
+wget https://github.com/akbarsahata/setup/raw/master/Installer.zip
+echo "installing cloudagent"
+unzip -a Installer.zip -d ~/Desktop
+sudo installer -pkg ~/Desktop/CloudAgent.pkg -target /
+echo "downloading deep freeze mac"
+wget https://github.com/akbarsahata/setup/raw/master/Faronics_DFM.dmg
+mv ./Faronics_DFM.dmg ~/Desktop
+echo "mounting deep freeze mac"
+hdiutil attach ~/Desktop/Faronics_DFM.dmg
 
 # Disable Wifi and Hide the Icon
 
