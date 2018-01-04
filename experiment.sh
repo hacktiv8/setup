@@ -105,9 +105,11 @@ brew install yarn
 # Android
 echo "==> preparing for android dev"
 echo "Installing android-sdk"
-brew install android-sdk
-echo "Installing genymotion"
-brew cask install genymotion
+brew cask install android-sdk
+echo "Installing android-studio"
+brew cask install android-studio
+#echo "Installing genymotion"
+#brew cask install genymotion
 echo "Installing vysor"
 brew cask install vysor
 
