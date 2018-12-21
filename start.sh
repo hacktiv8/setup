@@ -67,13 +67,13 @@ brew cask install google-chrome
 brew install git
 brew cask install visual-studio-code
 brew cask install insomnia
-brew install heroku-toolbelt
+brew install heroku/brew/heroku
 brew cask install expo-xde
 heroku update
 brew cask install postgres
 
 # Node
-brew install node
+brew install node@10
 brew install postgres
 brew install watchman
 brew install redis
@@ -82,7 +82,7 @@ brew install yarn
 brew install sqlite3
 
 # Android
-brew install android-sdk
+brew cask install android-sdk
 brew cask install genymotion
 brew cask install vysor
 
