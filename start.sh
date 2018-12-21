@@ -62,23 +62,15 @@ brew cask install java
 
 # Browsers
 brew cask install google-chrome
-brew cask install firefox
 
 # Dev Tools
 brew install git
-brew cask install sublime-text
-brew cask install atom
+brew cask install visual-studio-code
 brew cask install insomnia
-brew cask install macdown
 brew install heroku-toolbelt
 brew cask install expo-xde
 heroku update
-
-brew install docker
 brew cask install postgres
-
-# Graphic Apps
-brew cask install sketch
 
 # Node
 brew install node
@@ -87,6 +79,7 @@ brew install watchman
 brew install redis
 brew cask install mongodb
 brew install yarn
+brew install sqlite3
 
 # Android
 brew install android-sdk
@@ -104,9 +97,12 @@ npm install -g mocha
 npm install -g jest
 npm install -g firebase-tools
 npm install -g aws-sdk
-npm install -g vue-cli
+npm install -g @vue/cli
 npm install -g express-generator
-npm install -g exp
+npm install -g live-server
+npm install -g json-server
+
+brew cask install android-studio
 
 # Dock Cleanup
 defaults delete com.apple.dock persistent-apps
@@ -114,11 +110,9 @@ defaults delete com.apple.dock persistent-others
 
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Google Chrome.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/iTerm.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Sublime Text.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Atom.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
+defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Visual Studio Code.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Insomnia.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Slack.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
-defaults write com.apple.dock persistent-apps -array-add '<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>/Applications/Expo XDE.app</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>'
 
 killall Dock
 
